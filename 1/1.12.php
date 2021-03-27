@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST["a"])&&isset($_POST["b"])){
+if (is_numeric($_POST["a"])&&is_numeric($_POST["b"])){
     $matrix = array();
     for ($i=0; $i < $_POST["a"]; $i++) { 
         for ($j=0; $j < $_POST["b"]; $j++) { 
@@ -19,6 +19,8 @@ if (isset($_POST["a"])&&isset($_POST["b"])){
         }
         echo "<br>";
     }
+}else{
+    echo "Błąd";
 }
 ?>
 <html>
